@@ -1,0 +1,44 @@
+<%= button_to 'Search for movies', discover_path, method: :get %></li>
+
+<section id="friends">
+  <h3>Friends</h3>
+    <% if current_user.no_followers? %>
+      <%= "You currently have no friends" %>
+    <% else %>
+      <% current_user.followings.each do |friend|%>
+        <%= friend.email %>
+      <% end %>
+    <% end %>
+
+  <h4>Find Friends</h4>
+    <%= form_with model: Friend, method: :post, url: user_friends_path(current_user), local: true do |f| %>
+      <%= f.label :email %>
+      <%= f.text_field :email %><br/><br/>
+      <%= f.submit 'Add Friend'%>
+    <% end %>
+</section>
+<section id="viewing_parties" >
+    <h2>Viewing Parties</h2>
+      <section id='hosting'>
+        <h3>Hosted Parties</h3>
+        <ul>
+          <% current_user.hosted_parties.each do |party| %>
+            <li><%= party.movie.title %></li>
+            <li><%= party.date.strftime('%B %d, %Y')%></li>
+            <li><%= party.start_time.strftime('%l:%M %p')%> </li>
+            <li><%= 'Hosting'%></li>
+          <% end %>
+        </ul>
+      </section>
+      <section id='invited'>
+        <h3>Invited Parties</h3>
+        <ul>
+          <% current_user.invited_parties.each do |party| %>
+            <li><%= party.movie.title %></li>
+            <li><%= party.date.strftime('%B %d, %Y') %></li>
+            <li><%= party.start_time.strftime('%l:%M %p')%> </li>
+            <li><%= 'Invited'%></li>
+          <% end %>
+        </ul>
+      </section>
+</section>

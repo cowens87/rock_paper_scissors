@@ -1,0 +1,7 @@
+id,first_name,last_name,created_at,updated_at,address
+1,Salim,Imwera,2012-03-27 14:54:09 UTC,2012-03-27 14:54:09 UTC,"Up The Hill, Kwale, Kenya"
+2,Sally,Smith,2012-03-27 14:54:10 UTC,2012-03-27 14:54:10 UTC,Test Address
+3,Manu,Chau,2012-03-27 14:54:10 UTC,2012-03-27 14:54:10 UTC,"La Vida Loquisima, Cartagena, CO"
+4,Logan,Rogan,2012-03-27 14:54:10 UTC,2012-03-27 14:54:10 UTC,"This Is An Address, Aurora, CO"
+5,Meegan,Dap,2012-03-27 14:54:10 UTC,2012-03-27 14:54:10 UTC,"This Is Also An Address, Denver, CO"
+6,Saundra,Peters,2012-03-27 14:54:10 UTC,2012-03-27 14:54:10 UTC,"This Too Is An Address, Denver, CO"

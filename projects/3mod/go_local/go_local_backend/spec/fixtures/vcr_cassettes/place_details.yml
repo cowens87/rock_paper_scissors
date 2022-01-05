@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://go-local-maps-api.herokuapp.com/api/v1/place_details?place_id=ChIJFaqhMyt_bIcRMfeTGF4E8kM
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '617'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 04 Mar 2021 05:14:51 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjp7ImlkIjpudWxsLCJ0eXBlIjoicGxhY2UiLCJhdHRyaWJ1dGVzIjp7InBsYWNlX2lkIjoiQ2hJSkZhcWhNeXRfYkljUk1mZVRHRjRFOGtNIiwiZm9ybWF0dGVkX2FkZHJlc3MiOiIxMDAgVyAxNHRoIEF2ZSBQa3d5LCBEZW52ZXIsIENPIDgwMjA0LCBVU0EiLCJuYW1lIjoiRGVudmVyIEFydCBNdXNldW0iLCJ0eXBlcyI6WyJ0b3VyaXN0X2F0dHJhY3Rpb24iLCJtdXNldW0iLCJwb2ludF9vZl9pbnRlcmVzdCIsImVzdGFibGlzaG1lbnQiXSwiZm9ybWF0dGVkX3Bob25lX251bWJlciI6Iig3MjApIDg2NS01MDAwIiwid2Vic2l0ZSI6Imh0dHBzOi8vZGVudmVyYXJ0bXVzZXVtLm9yZy8iLCJidXNpbmVzc19zdGF0dXMiOiJPUEVSQVRJT05BTCIsIm9wZW5pbmdfaG91cnMiOlsiTW9uZGF5OiAxMDowMCBBTSDigJMgNTowMCBQTSIsIlR1ZXNkYXk6IDEwOjAwIEFNIOKAkyA1OjAwIFBNIiwiV2VkbmVzZGF5OiAxMDowMCBBTSDigJMgNTowMCBQTSIsIlRodXJzZGF5OiAxMDowMCBBTSDigJMgNTowMCBQTSIsIkZyaWRheTogMTA6MDAgQU0g4oCTIDU6MDAgUE0iLCJTYXR1cmRheTogMTA6MDAgQU0g4oCTIDU6MDAgUE0iLCJTdW5kYXk6IDEwOjAwIEFNIOKAkyA1OjAwIFBNIl19fX0=
+  recorded_at: Thu, 04 Mar 2021 05:14:51 GMT
+recorded_with: VCR 6.0.0

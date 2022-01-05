@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://go-local-maps-api.herokuapp.com/api/v1/place_search?location=casa-bonita-denver-co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '253'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 04 Mar 2021 05:14:51 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"place","attributes":{"place_id":"ChIJE7tYRySHa4cRSauU_fDROfk","formatted_address":"6715
+        W Colfax Ave, Lakewood, CO 80214, United States","name":"Casa Bonita","types":["restaurant","food","point_of_interest","establishment"]}}}'
+  recorded_at: Thu, 04 Mar 2021 05:14:51 GMT
+recorded_with: VCR 6.0.0
