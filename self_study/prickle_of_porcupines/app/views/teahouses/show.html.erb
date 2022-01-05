@@ -1,0 +1,9 @@
+<h1><%= @teahouse.name%></h1>
+<li>Street Address: <%= @teahouse.address%> 
+<li>City:           <%= @teahouse.city%> 
+<li>State:          <%= @teahouse.state%> 
+<li>Zip:            <%= @teahouse.zip%></li><br> 
+
+<%= link_to "#{@teahouse.name} Boba Teas", "/teahouses/#{@teahouse.id}/boba_teas" %><br> 
+<%= link_to 'Update Teahouse', edit_teahouse_path(@teahouse) %><br> 
+<%= link_to 'Delete Teahouse', teahouse_path(@teahouse), method: :delete %><br/> 

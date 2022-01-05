@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LotusFlowerBomb</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <header>
+    <div class="nav-bar">
+      <ul>
+        <p><%= link_to "Back to Home", "/" %>
+           <%= link_to "List of Teahouses", teahouses_path %>
+           <%= link_to 'List of Boba Teas', boba_teas_path %>
+  </head><br>
+
+  <body>
+  <% flash.each do |type, message| %>
+     <p>💥 <%= message %> 💥</p>
+   <% end %>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<h1>All Boba Teas</h1>
+
+<%= form_tag boba_teas_path, method: :get do %>
+<%= label_tag :tea_threshold, "Teas with price greater than:" %>
+<%= number_field_tag :tea_threshold %>
+<%= submit_tag 'Go' %>
+<% end %><br>
+
+<%= link_to 'Start A Request', new_request_path %><br>
+<%= link_to 'New Boba Tea', new_boba_tea_path %><br>
+
+<% @boba_teas.each do |boba_tea| %>
+  <section id="boba_tea-<%=boba_tea.id%>">
+    <h3><%= link_to "#{boba_tea.name}", boba_tea_path(boba_tea) %></h3>
+    <li>Price:      $<%= boba_tea.price %></li>
+    <li>Base:        <%= boba_tea.base %></li>
+    <li>Caffeinated: <%= boba_tea.caffeinated %></li>
+    <li>Description: <%= boba_tea.description %></li>
+    <h6><%= link_to "Update #{boba_tea.name}", edit_boba_tea_path(boba_tea) %></h6>
+    <h6><%= link_to "Delete #{boba_tea.name}", boba_tea_path(boba_tea), method: :delete  %></h6>
+  </section>
+<% end %>

@@ -1,0 +1,52 @@
+<h1>Request Details</h1>
+<section id="details-<%= @request.id %>">
+  <li>Name:           <%= @request.name%>
+  <li>Status:         <%= @request.status%>
+  <li>Street Address: <%= @request.address%> 
+  <li>City:           <%= @request.city%> 
+  <li>State:          <%= @request.state%> 
+  <li>Zip:            <%= @request.zip%>
+  <li>Reason:         <%= @request.reason%></li>
+</section>
+
+<section id="request<%= @request.id %>-boba-teas-added">  
+  <% if @request.boba_teas.count == 0 %>
+  <% else %>
+    <h3>Boba Teas Requesting to Buy:</h3>
+      <div id="boba-teas-added">
+        <% @request.boba_teas.each do |boba_tea| %>
+          <div><%= link_to "#{boba_tea.name}", boba_tea_path(boba_tea), method: :get %></div>
+        <% end %>
+      </div>
+    <% end %>
+</section>
+
+<h3>Add a Boba Tea!</h3>
+<% if @request.status == "In Progress" %>
+  <section class="find-tea">
+    <%= form_tag request_path(@request), method: :get do %>
+      <%= label_tag :tea_name, "Search for Boba Tea by Name" %>
+      <%= search_field_tag :tea_name %>
+      <%= submit_tag "Search", name: nil %>
+    <% end %>
+  </section>
+
+<% if !@boba_teas.nil? %>
+  <section class="boba_tea-results">
+    <% @boba_teas.each do |boba_tea| %>
+      <section id="boba_tea-<%= boba_tea.id %>">
+        <p>Boba Tea Name: <%= boba_tea.name %></p>
+        <%= button_to "Buy Me!", request_boba_teas_path(tea_id: boba_tea.id, request_id: @request.id), method: :post%>
+        <br>
+      </section>
+    <% end %>
+  </section>
+  <% end %>
+<% end %>
+
+<% if @request.boba_teas.count >= 1 && @request.status == "In Progress" %>
+  <h3>Submit Request</h3>
+  <%= form_tag request_path(@request), id: "request-#{@request.id}-submit", method: :patch do %>
+    <%= submit_tag 'Submit Request' %></br></br>
+  <% end %>
+<% end %>

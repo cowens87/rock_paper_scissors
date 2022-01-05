@@ -1,0 +1,16 @@
+<h2> Start A Request </h2>
+<%= form_with url: requests_path, local: true do |f| %>
+  <%= f.label :name, 'Name:', required: true %>
+  <%= f.text_field :name %>
+  <%= f.label :address, 'Street Address:', required: true%>
+  <%= f.text_field :address %>
+  <%= f.label :city, 'City:', required: true%>
+  <%= f.text_field :city %>
+  <%= f.label :state, 'State:', required: true %>
+  <%= f.text_field :state %>
+  <%= f.label :zip, 'Zip:', required: true %>
+  <%= f.text_field :zip %>
+  <%= f.label :reason, 'Reason:', required: true %>
+  <%= f.text_field :reason %>
+  <%= f.submit 'Submit' %>
+<% end %>
