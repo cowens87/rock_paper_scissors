@@ -1,0 +1,29 @@
+<h1>Surgery Overview</h1>
+
+==============================
+Details
+===============================
+<section class="surgery-info">
+<li>Title:            <%= @surgery.title %></li>
+<li>Operating Room No.: <%= @surgery.operating_room_number %></li>
+</section><br>
+================
+Other surgeries happening this day of the week:
+================
+<section class="other-surgeries">
+<li>Title(s): <%= Surgery.find_others_by_day(@surgery).pluck(:title).to_sentence %></li>
+</section>
+================
+Add A Doctor To This Surgery
+================
+
+Performing Surgeons: 
+<li>Performing Surgeons: <%= @surgery.doctors.pluck(:name).to_sentence %></li><br>
+
+<section id="add-doctor">
+  <%= form_tag surgery_doctors_path(@surgery), method: :post do %>
+    <%= label_tag :doctor, "Doctor Name" %>
+    <%= text_field_tag :doctor %><br>
+    <%= submit_tag 'Submit' %>
+  <% end %>
+</section>
