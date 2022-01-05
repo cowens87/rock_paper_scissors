@@ -1,0 +1,9 @@
+<h1>Studio Roster</h1>
+
+<% @studios.each do |studio| %>
+  <section id="studio-info-<%=studio.id%>">
+    <h3><%= studio.name %></h3>
+    <li>Location: <%= studio.location %></li>
+    <li>Movies:   <%= studio.list_of_movies.to_sentence %></li>
+  </section>
+<% end %>

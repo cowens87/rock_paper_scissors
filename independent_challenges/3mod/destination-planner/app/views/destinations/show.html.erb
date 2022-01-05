@@ -1,0 +1,29 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <h3>
+    <%= @destination.name %>
+  </h3>
+
+  <p>
+    <strong>Zip:</strong>
+    <%= @destination.zip %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @destination.description %>
+  </p>
+
+  <%= image_tag(@destination.image_url) %>
+
+  <div class="row">
+    <h4>Forecast for <%= @destination.name %>:</h4>
+
+  </div>
+
+  <div class="row">
+    <%= link_to 'Edit', edit_destination_path(@destination) %> |
+    <%= link_to 'Back', destinations_path %>
+  </div>
+</div>
