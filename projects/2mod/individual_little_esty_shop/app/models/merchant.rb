@@ -87,3 +87,4 @@ class Merchant < ApplicationRecord
       .first
   end
 
+

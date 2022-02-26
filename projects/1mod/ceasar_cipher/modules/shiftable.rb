@@ -61,6 +61,7 @@ module Shiftable
     shift_to_chars = {}
     split_message.each_with_index do |char, index|
       category = index % @shift_categories.count
+      require 'pry'; binding.pry
       (shift_to_chars[@shift_categories[category]] ||= []) << char
     end
     shift_to_chars

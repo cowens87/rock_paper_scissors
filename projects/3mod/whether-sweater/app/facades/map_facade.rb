@@ -5,6 +5,6 @@ class MapFacade
   end
 
   def self.get_trip(origin, destination)
-    trip_directions = MapService.directions(origin, destination)
+    MapService.directions(origin, destination)
   end
 end

@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Merchant, type: :model do
   before :each do
+    # Customers
     @salim     = Customer.create!(first_name: 'Salim', last_name: 'Imwera', address: 'Up The Hill, Kwale, Kenya')
     @sally     = Customer.create!(first_name: 'Sally', last_name: 'Smith', address: 'Test Address')
     @manu      = Customer.create!(first_name: 'Manu', last_name: 'Chau', address: 'La Vida Loquisima, Cartagena, CO')
@@ -111,17 +112,13 @@ RSpec.describe Merchant, type: :model do
         backpack = Item.create!(name: 'Camo Backpack', description: 'Double Zip Backpack', unit_price: 15.5, merchant_id: alibaba.id)
         invitm1  = InvoiceItem.create!(status: 0, quantity: 25, unit_price: 7.0, invoice_id: invoice1.id, item_id: candle.id)
         invitm2  = InvoiceItem.create!(status: 0, quantity: 10, unit_price: 15.5, invoice_id: invoice2.id, item_id: backpack.id)
-
+      
         expected_names = [sally.first_name, joel.first_name, john.first_name, travolta.first_name, sal.first_name]
         expected_successful_transaction_counts = [2, 2, 2, 2, 2]
 
-        actual_names = amazon.top_five_customers.map do |customer|
-          customer.first_name
-        end
+        actual_names = amazon.top_five_customers.map { |customer| customer.first_name }
 
-        actual_successful_transaction_counts = amazon.top_five_customers.map do |customer|
-          customer.successful_transactions
-        end
+        actual_successful_transaction_counts = amazon.top_five_customers.map { |customer| customer.successful_transactions }
 
         expect(actual_names).to eq(expected_names)
         expect(actual_successful_transaction_counts).to eq(expected_successful_transaction_counts)
@@ -293,30 +290,30 @@ RSpec.describe Merchant, type: :model do
         discount_11 = Discount.create!(discount_percentage: 20, quantity_threshold: 300, merchant_id: walmart.id)
         discount_12 = Discount.create!(discount_percentage: 30, quantity_threshold: 15, merchant_id: overstock.id)
         discount_13 = Discount.create!(discount_percentage: 15, quantity_threshold: 20, merchant_id: overstock.id)
-        
+      
         expected = [walmart.name, overstock.name, amazon.name, amazon.name, spice_emp.name]
 
         expect(Merchant.top_five_merchants.map {|merchant| merchant.name}).to eq(expected)
       end
     end
-    # Individual Project Stories:
-    it 'Can find the total discount applied to a merchants invoice items' do
-      expect(@amazon.discount_amount?(@amazon.invoice_items)).to eq(237.5)
-      expect(@spice_emp.discount_amount?(@spice_emp.invoice_items)).to eq(88.6)
-    end
+  end
+  # Individual Project Stories:
+  it 'Can find the total discount applied to a merchants invoice items' do
+    expect(@amazon.discount_amount?(@amazon.invoice_items)).to eq(237.5)
+    expect(@spice_emp.discount_amount?(@spice_emp.invoice_items)).to eq(88.6)
+  end
 
-    it 'Can determine if invoice items are eligible for a discount' do
-      expected  = @spice_emp.discount_eligible?(@spice_emp.invoice_items.last)
-      expected1 = @spice_emp.discount_eligible?(@spice_emp.invoice_items.first)
-   
-      expect(expected.count >= 1).to be(true)
-      expect(expected1.count >= 1).to be(false)
-    end
+  it 'Can determine if invoice items are eligible for a discount' do
+    expected  = @spice_emp.discount_eligible?(@spice_emp.invoice_items.last)
+    expected1 = @spice_emp.discount_eligible?(@spice_emp.invoice_items.first)
+  
+    expect(expected.count >= 1).to be(true)
+    expect(expected1.count >= 1).to be(false)
+  end
 
-    it 'Can find which discount was applied' do
-      expected  = @spice_emp.discount_applied(@spice_emp.invoice_items.last)
-   
-      expect(expected).to eq(@discount_7)
-    end
+  it 'Can find which discount was applied' do
+    expected  = @spice_emp.discount_applied(@spice_emp.invoice_items.last)
+  
+    expect(expected).to eq(@discount_7)
   end
 end
