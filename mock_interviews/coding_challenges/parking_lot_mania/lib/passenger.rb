@@ -1,11 +1,11 @@
 class Passenger
   attr_reader :name,
-              :age,
-              :drive
+            :age,
+            :drive
 
   def initialize(attributes)
-    @name = attributes['name']
-    @age = attributes['age']
+    @name   = attributes['name']
+    @age    = attributes['age']
     @driver = false
   end
 
