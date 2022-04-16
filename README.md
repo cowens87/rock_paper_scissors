@@ -5,7 +5,7 @@
 
 
 
-## Turing School of Software and Design - 2010BE PROGRAM
+## Turing School of Software and Design (2010BE Program)
 
 ### RUBY
 
@@ -20,7 +20,7 @@
 ### JAVASCRIPT
 
 > All JavaScript projects were completed after graduating Turing School of Software & Design through self-learning
-***All work and coding completion was completed solo***
+***All work and coding completion was completed independently***
 
 ```js
 - Projects
