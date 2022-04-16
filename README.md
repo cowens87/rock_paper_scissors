@@ -5,12 +5,23 @@
 
 
 
-## 2010BE PROGRAM
+## 2010BE PROGRAM - RUBY
 
 ```
 Turing School of Software and Design
+
+This repository houses all the projects and assessments created and completed whilst attending Turing's Backend Program.
+***A strong effort has been made to implement RSpec testing into all projects, that being said Minitest testing may still exist in some sub-repos***
 
 - Projects
 - Assessments
 ```
 
+## JAVASCRIPT
+
+```
+All JavaScript projects were completed after graduating Turing School of Software & Design through self-learning
+*** All work and coding completion was completed solo ***
+
+- Projects
+- Resources.md
