@@ -1,0 +1,27 @@
+
+<h1><%= @movie.title %></h1>
+<% if current_user %>
+  <%= form_with model: Party, method: :get, url: new_user_party_path(current_user), local: true do |f| %>
+    <%= f.submit 'Create a Viewing Party'%>
+  <% end %>
+<% else %>
+<p> Log in or Register to Create a Viewing Party <br>
+  <%= button_to "Log In", login_path, method: :get %><br>
+  <%= button_to "Register", registration_path, method: :get %> </p>
+<% end %>
+
+<ul>
+  <li>Summary:      <%= @movie.summary %> </li>
+  <li>Run Time:     <%= @movie.run_time %> minutes </li>
+  <li>Average Vote: <%= @movie.average_vote %> </li>
+  <li>Genres:       <%= @movie.genres.to_sentence %> </li>
+</ul>
+<b> Cast Members: <% @movie.cast.each do |member|  %></b>
+    <p><%= member %> </p>
+  <% end %>
+<br>
+<p> Total Reviews:  <%= @movie.reviews.count %> </p>
+<b> Reviews: <% @movie.reviews.each do |review| %> </b>
+  <p><%= review[:author] %> </p>
+  <p><%= review[:content] %> </p>
+<% end %>

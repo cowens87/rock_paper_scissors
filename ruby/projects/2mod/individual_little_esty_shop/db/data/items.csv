@@ -1,0 +1,19 @@
+id,name,description,unit_price,merchant_id,created_at,updated_at
+1,Beans,Tasty,5,2,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+2,Item 2,Blah,10,2,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+3,Item 3,Test,15,2,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+4,Camo Backpack,Double Zip Backpack,5,1,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+5,Retro Radio,Twist and Turn to your fav jams,10,1,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+6,Boar Brush,Hair Brush,12.5,1,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+7,Cumin Powder,An essential spice for Indian curries and chutney,5.5,6,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+8,Turmeric Powder,A spice that comes from the turmeric plant. It is commonly used in Asian food,7.5,6,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+9,Smoked Sweet Paprika,These sweet peppers are dried over an oak burning fire for a smoky flavor,12.5,6,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+10,Dominican Sazon,A pre-made seasoning blend to bring out authentic Dominican flavors,19,6,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+11,Garlic Powder,Derived from dehydrated garlic and used in cooking for flavour enhancemen,4,6,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+12,Amber Glass Jar,Amber-Colored Jars,1.9,3,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+13,Coffee Cup,Handleless Cup,6.5,3,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+14,Black Knitted Jumper,Cable Knit Jumper,15,4,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+15,Rose Gold Earring,Sparkly and Dangly,10.8,4,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+16,Running Sneakers,Trek about in these airy sneakers,31,4,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+17,Recliner Chair,Comfy Chair,24,5,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC
+18,Student Desk,An essential� desk for all students,49.5,5,2012-03-27 14:53:59 UTC,2012-03-27 14:53:59 UTC

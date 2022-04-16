@@ -1,0 +1,9 @@
+<h1>All Surgeries</h1>
+
+<% @hospitals.each do |hospital| %>
+<% binding.pry %>
+  <section id="surgery-info-<%=surgery.id%>">
+    <h3>Title:<%= link_to "#{surgery.title}", surgery_path(surgery) %></h3>
+    <li>Performing Surgeons: <%= surgery.doctors.pluck(:name).to_sentence %></li><br>
+  </section>
+  <% end %>
