@@ -1,6 +1,6 @@
 class Librarian {
-  constructor() {
-    
+  constructor(name) {
+    this.name = name;
   }
 }
 
