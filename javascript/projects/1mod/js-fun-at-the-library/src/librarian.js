@@ -5,8 +5,8 @@ class Librarian {
   }
 }
 
-function greetPatron(name) {
-  
+greetPatron(name) {
+
 }
 
 module.exports = Librarian;
