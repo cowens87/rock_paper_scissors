@@ -7,7 +7,7 @@
 
 ### RUBY
 
-> This repository houses all the projects and assessments created and completed whilst attending Turing's Backend Program.
+> This directory houses all the projects and assessments created and completed whilst attending Turing's Backend Program.
 ***A strong effort has been made to refactor all code-bases and to implement RSpec testing into all projects, that being said, Minitest testing may still exist in some sub-repos***
 
 ```ruby
