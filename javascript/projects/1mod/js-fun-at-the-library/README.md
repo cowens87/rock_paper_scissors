@@ -1,4 +1,5 @@
 # JS Fun in the Library
+![bell](https://user-images.githubusercontent.com/67389821/164158481-3f707697-d05c-4269-bda1-196a21071c8d.gif)
 
 ## Overview
 
