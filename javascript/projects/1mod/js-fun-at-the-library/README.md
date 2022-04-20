@@ -61,7 +61,7 @@ problem.
 - Ensure that all of the skips are removed from the test file when you push up to GitHub.
 
 ## Self-Assessment
-```
+```js
 The goal of this project is not completion. The goal is to put into practice some of the tools we’ve been discussing (pseudocoding, rubber ducking, problem solving), and to practice writing fundamental JavaScript.
 
 The value of this project, and every project, lies in the learning that you do and the growth that you demonstrate over the course of it. We expect you to work hard for the benefit of your own learning.
