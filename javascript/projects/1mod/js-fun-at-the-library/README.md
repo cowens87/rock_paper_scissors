@@ -52,7 +52,9 @@ problem.
 - Run npm test test/library-test.js
 - Ensure that all of the skips are removed from the test file when you push up to GitHub.
 - Before moving on to the next iteration, take time to refactor your solutions. Is this the best approach to solving the problem? Is there a different way you could make the tests pass?
-- Extension (not part of the project, just stuff to do if you get to it): Complete the Librarian tests
+#### Extension 
+> (not part of the project, just stuff to do if you get to it):
+- Complete the Librarian tests
 - Unskip the first test in test/librarian-test.js, and get to work passing the tests
 - Run npm test test/librarian-test.js
 - This test involves using a class. It will require self-teaching in order to complete.
