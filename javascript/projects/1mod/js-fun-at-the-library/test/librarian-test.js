@@ -46,7 +46,7 @@ describe('Librarian (class)', function() {
     assert.equal(scott.greetPatron("Tilly"), "Hello, Tilly!");
   });
 
-  it.skip('should greet a library patron differently if it is morning', function() {
+  it('should greet a library patron differently if it is morning', function() {
     var leta = new Librarian("Leta");
 
     assert.equal(leta.greetPatron("Scott"), "Hello, Scott!");
@@ -54,7 +54,7 @@ describe('Librarian (class)', function() {
     assert.equal(leta.greetPatron("Casey", false), "Hello, Casey!");
   });
 
-  it.skip('should confirm if a requested book is on the shelves', function() {
+  it('should confirm if a requested book is on the shelves', function() {
     var auroraLibrary = createLibrary("Aurora Public Library");
     var librarian = new Librarian("Casey", auroraLibrary);
     var book = {title: 'The Fifth Season', genre: 'fantasy'}
@@ -66,7 +66,7 @@ describe('Librarian (class)', function() {
     assert.equal(bookConfirmation, "Yes, we have The Fifth Season");
   });
 
-  it.skip('should say if requested book is not found', function() {
+  it('should say if requested book is not found', function() {
     var library = createLibrary("Aurora Public Library");
     var librarian = new Librarian("Casey", library);
     var book = { title: 'The Fifth Season', genre: 'fantasy' }
@@ -78,7 +78,7 @@ describe('Librarian (class)', function() {
     assert.equal(bookConfirmation, "Sorry, we do not have Five Brief Lessons in Physics");
   });
 
-  it.skip('should checkout the book if found', function() {
+  it('should checkout the book if found', function() {
     var library = createLibrary("Aurora Public Library");
     var librarian = new Librarian("Casey", library);
     var book = { title: 'The Fifth Season', genre: 'fantasy' }
@@ -90,7 +90,7 @@ describe('Librarian (class)', function() {
     assert.deepEqual(librarian.library.shelves.fantasy, []);
   });
 
-  it.skip('calculateLateFee should charge the customer a fee of 0.25 per day the book is late, rounded up to the closest whole number (integer)', function() {
+  it('calculateLateFee should charge the customer a fee of 0.25 per day the book is late, rounded up to the closest whole number (integer)', function() {
     var library = createLibrary("Aurora Public Library");
     var librarian = new Librarian("Casey", library);
     var threeDaysLate = librarian.calculateLateFee(3);
