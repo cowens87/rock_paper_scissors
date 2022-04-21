@@ -1,6 +1,5 @@
 function createRestaurant(name) {
-  var info = { name: name, menus: { breakfast: [], lunch: [], dinner: [] }
-  };
+  var info = { name: name, menus: { breakfast: [], lunch: [], dinner: [] } };
   return info;
 }
 
