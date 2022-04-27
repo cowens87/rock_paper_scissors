@@ -19,7 +19,7 @@
 
 > All JavaScript projects were completed after graduating Turing School of Software & Design through self-learning.
 
-***All work and coding completion was completed independently***
+***All work and coding was completed independently***
 
 ```js
 - Projects
