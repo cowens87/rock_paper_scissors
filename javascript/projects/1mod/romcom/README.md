@@ -7,7 +7,7 @@ A boilerplate repo.
 2. Clone down your new, forked repo
 3. cd into the repository
 4. Open it in your text editor
-5. View the project in the browser by running open `index.html` in your terminal
+5. View the project in the browser by running `open index.html` in your terminal
 6. Then:
 
 - Explore the repository to see what’s going on in the code
@@ -20,19 +20,18 @@ A boilerplate repo.
 
 ## Iteration 0 - Main Page
 ### Homepage
-```
-When the page loads, we should see a cover with a randomly selected image, title, and tagline which includes two random descriptors
-```
+- [&check;] When the page loads, we should see a cover with a randomly selected image, title, and tagline which includes two random descriptors
 
 ## Iteration 1 - Show Random Cover
 ### Randomize
-```
-Every time the user clicks the Show New Random Cover button, a new random cover is created
-hint: you may need to update the value of the provided currentCover variable
-hint: use that Cover class!
-Every time the user clicks the Show New Random Cover button, the random cover is displayed
+
+- [] Every time the user clicks the Show New Random Cover button, a new random cover is created
+> hint: you may need to update the value of the provided currentCover variable
+
+> hint: use that Cover class!
+- [] Every time the user clicks the Show New Random Cover button, the random cover is displayed
 hint: you may need to create a function that displays information on the DOM
-```
+
 
 ## Iteration 2 - Switching Views
 ```

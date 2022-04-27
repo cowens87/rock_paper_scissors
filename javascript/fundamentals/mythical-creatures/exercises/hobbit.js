@@ -4,6 +4,7 @@ class Hobbit {
     this.age  = 0;
     this.adult = false;
     this.old = false;
+    this.hasRing = false;
   }
 
   celebrateBirthday() {
@@ -11,12 +12,18 @@ class Hobbit {
   }
 
   timeTravel(age, hobbit) {
-    hobbit.age = age
-    if (age > 100) {
-      this.old = true;
-    } else if (age > 32) {
-      this.adult = true;
+    hobbit.age = age;
+    if(age > 32) {
+      return hobbit.adult = true;
     }
+  }
+
+  getRing() { 
+    if(this.name === 'Frodo') {
+      this.hasRing = true;
+      return 'Here is the ring!'
+    }
+    return 'You can\'t have it!'
   }
 }
 
